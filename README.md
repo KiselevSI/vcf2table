@@ -41,7 +41,7 @@ pip install pandas pysam openpyxl tqdm
 #### Синтаксис
 
 ```bash
-extract -i <input_vcf> -o <output_excel> [-p] [-th <threads>]
+python3 vcf2table.py extract -i <input_vcf> -o <output_excel> [-p] [-th <threads>]
 ```
 
 #### Аргументы
@@ -54,7 +54,7 @@ extract -i <input_vcf> -o <output_excel> [-p] [-th <threads>]
 #### Пример
 
 ```bash
-extract -i input.vcf -o output.xlsx -p -th 8
+python3 vcf2table.py extract -i input.vcf -o output.xlsx -p -th 8
 ```
 
 В этом примере аннотации извлекаются из файла `input.vcf` и сохраняются в `output.xlsx`. Прогресс отображается, а обработка выполняется в 8 потоков.
@@ -90,7 +90,7 @@ extract -i input.vcf -o output.xlsx -p -th 8
 #### Синтаксис
 
 ```bash
-update -v <vcf_files> -t <input_excel> -o <output_excel> [-p] [-th <threads>]
+python3 vcf2table.py update -v <vcf_files> -t <input_excel> -o <output_excel> [-p] [-th <threads>]
 ```
 
 #### Аргументы
@@ -104,7 +104,7 @@ update -v <vcf_files> -t <input_excel> -o <output_excel> [-p] [-th <threads>]
 #### Пример
 
 ```bash
-update -v file1.vcf file2.vcf -t input.xlsx -o updated.xlsx -p -th 8
+python3 vcf2table.py update -v file1.vcf file2.vcf -t input.xlsx -o updated.xlsx -p -th 8
 ```
 
 В этом примере таблица `input.xlsx` обновляется данными из `file1.vcf` и `file2.vcf`, результат сохраняется в `updated.xlsx` с отображением прогресса и использованием 8 потоков.
