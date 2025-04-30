@@ -120,7 +120,7 @@ python vcf2table.py all -v vcf/*.vcf.gz -o result.xlsx -r Yasnaya_Polyana -p
 1. Создайте базу данных для snpEff с помощью скрипта сборки:
 
 ```bash
-./build_phage_db_conda.sh NC_054909.1 Yasnaya_Polyana
+./make_db.sh NC_054909.1 Yasnaya_Polyana
 ```
 
 2. Запустите vcf2table с именем созданной базы данных:
@@ -180,7 +180,7 @@ python vcf2table.py all -v run1/*.vcf.gz run2/*.vcf.gz -o combined_results.xlsx 
 
 ## Автор
 
-Ваше имя
+KiselevSI
 
 ## Благодарности
 
